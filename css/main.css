@@ -1,0 +1,38 @@
+html {
+    background-size: cover;
+    font: 60px/1em "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+}
+.uniswap {
+    background: #2c2f36;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border: 0; 
+    margin: 0 auto; 
+    max-width: 600px; 
+    min-width: 250px;
+    transform: scale(0.85);
+    height: 710px;
+    width: 416px;
+    border-radius: 20px
+}
+#header {
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    font-size: 1em;
+    padding: 0.5em 0 0 0;
+    margin: 0;
+}
+
+#tips { margin: 0; padding:0; font-size: 0.5em; text-align: center; color: #b8b8b8}
+#tips span { font-weight: normal;}
+.tip:hover { text-decoration: underline; cursor: pointer}
+.address { font-size: 0.7em;}
+#tips p { line-height: 1.5em; background: rgba(0,0,0,0.5); display: inline-block; padding: 1em; border-radius: 20px; }
