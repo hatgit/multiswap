@@ -1,7 +1,7 @@
 function addUI() {
     quotes = ["It's a healthy correction", "I am a successful trader", "When moon?", "Thanks for the divs", 
     "It aint much, but it's honest work", "Imagine not buying this dip", "Good project sir", 
-    "I am financially ruined", "When rug?", "HODL", "Funds are safu"]
+    "When rug?", "HODL", "Funds are safu"]
     $('#header').text(quotes[Math.floor(Math.random()*quotes.length)])
     $('html').css('background-image', `url(img/${Math.floor(Math.random()*15)}.jpg)`)
     for (var i=0; i < 12; i++) {
