@@ -1,13 +1,40 @@
-function addUI() {
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+function getUrlParam(parameter, defaultvalue){
+    var urlparameter = defaultvalue;
+    if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+    }
+    return urlparameter;
+}
+
+function addUI(n) {
     quotes = ["It's a healthy correction", "I am a successful trader", "When moon?", "Thanks for the divs", 
     "It aint much, but it's honest work", "Imagine not buying this dip", "Good project sir", 
     "When rug?", "HODL", "Funds are safu"]
     $('#header').text(quotes[Math.floor(Math.random()*quotes.length)])
     $('html').css('background-image', `url(img/${Math.floor(Math.random()*15)}.jpg)`)
-    for (var i=0; i < 12; i++) {
+    for (var i=0; i < n; i++) {
         $('<embed class="uniswap" src="https://app.uniswap.org/#/swap?theme=dark" />')
         .appendTo('#flex-container')
     }
+}
+
+function main() {
+    let n = getUrlParam('n', null);
+    if (n==null) {
+        n = 12
+    } else if(n > 24) {
+        console.error('Max of 24 Uniswap UIs')
+        n = 24
+    }
+    addUI(n);
 }
 
 $(document).on('click', '#smalltip', function (e) {
@@ -60,4 +87,6 @@ $(document).on('click', '#hugetip', function (e) {
     })    
     e.preventDefault();
 });
+
+
 
