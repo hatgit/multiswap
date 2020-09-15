@@ -19,28 +19,46 @@ function addAd(imgUrl, header, body) {
     .appendTo('#flex-container') 
 }
 
-function addUI(n) {
+function addUI(n=null, a=null) {
     quotes = ["It's a healthy correction", "I am a successful trader", "When moon?", "Thanks for the divs", 
     "It aint much, but it's honest work", "Imagine not buying this dip", "Good project sir", 
     "When rug?", "HODL", "Funds are safu"]
     $('#header').text(quotes[Math.floor(Math.random()*quotes.length)])
     $('html').css('background-image', `url(img/${Math.floor(Math.random()*15)}.jpg)`)
-    for (var i=0; i < n; i++) {
-        $('<embed class="uniswap" src="https://app.uniswap.org/#/swap?theme=dark" />')
-        .appendTo('#flex-container')
+
+    if (a) {
+        a.map(address => {
+            console.log(address)
+            $(`<embed class='uniswap' src="https://app.uniswap.org/#/swap?theme=dark&inputCurrency=${address}&outputCurrency=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" />`)
+            .appendTo('#flex-container')
+        })
+    }
+    if (n) {
+        for (var i=0; i < n; i++) {
+            $('<embed class="uniswap" src="https://app.uniswap.org/#/swap?theme=dark" />')
+            .appendTo('#flex-container')
+        }
     }
 }
 
 function main() {
     let n = getUrlParam('n', null);
-    if (n==null) {
+    let a = getUrlParam('a', null); 
+    if (a) {
+        a = a.split(',');
+        if (!n) { // if a not n
+            n = 0;
+        } else { // if a and n
+            n = Math.max(n - a.length, 0)
+        }
+    } else if (!n) { // if not a not n
         n = 12
-    } else if(n > 24) {
+    } else if(n > 24) { // if not a and n > 24
         console.error('Max of 24 Uniswap UIs')
         n = 24
     }
     addAd('img/chartex.jpg', 'CHART token launching on Uniswap this Friday!', '<p>Join the <a href="https://discord.gg/3pPur67">Discord</a> for details</p>')
-    addUI(n);
+    addUI(n, a);
 }
 
 $(document).on('click', '#smalltip', function (e) {
