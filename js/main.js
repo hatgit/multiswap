@@ -14,6 +14,11 @@ function getUrlParam(parameter, defaultvalue){
     return urlparameter;
 }
 
+function addAd(imgUrl, header, body) {
+    $(`<div class="uniswap ad"><img src="${imgUrl}" width="100%"><h2 class="adtext">${header}</h2>${body}</div>`)
+    .appendTo('#flex-container') 
+}
+
 function addUI(n) {
     quotes = ["It's a healthy correction", "I am a successful trader", "When moon?", "Thanks for the divs", 
     "It aint much, but it's honest work", "Imagine not buying this dip", "Good project sir", 
@@ -34,6 +39,7 @@ function main() {
         console.error('Max of 24 Uniswap UIs')
         n = 24
     }
+    addAd('img/chartex.jpg', 'ChartEx token launching on Uniswap this Friday!', '<p>Join the <a href="https://discord.gg/3pPur67">Discord</a> for details</p>')
     addUI(n);
 }
 

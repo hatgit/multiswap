@@ -36,3 +36,27 @@ html {
 .tip:hover { text-decoration: underline; cursor: pointer}
 .address { font-size: 0.7em;}
 #tips p { line-height: 1.5em; background: rgba(0,0,0,0.5); display: inline-block; padding: 1em; border-radius: 20px; }
+
+.ad {
+    width: 450px;
+    height: 820px;
+    transform: scale(0.55);
+    border: 6px solid #009de1;
+    box-sizing: border-box;
+    background-color: #000200;
+    color: white;
+    overflow: hidden;
+}
+
+.ad h2 {
+    line-height: 1.2em;
+}
+
+.ad p {
+    font-size: 1.2em;
+}
+
+.ad p a {
+    color: #f6b900;
+}
+
