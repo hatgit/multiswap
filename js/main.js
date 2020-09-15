@@ -20,8 +20,8 @@ function addAd(imgUrl, header, body) {
 }
 
 function addUI(n=null, a=null) {
-    quotes = ["It's a healthy correction", "I am a successful trader", "When moon?", "Thanks for the divs", 
-    "It aint much, but it's honest work", "Imagine not buying this dip", "Good project sir", 
+    quotes = ["Swap the top 20 ethereum ERC20 tokens in one place", "A solution for market-weighted exposure", "Passive ways to buy the top 20 ERC20 Tokens", "Passive investing in Crypto", 
+    "Buy Ethereym tokens", "Swap ETH for top ERC20 assets", "How to buy the top 20 ethereum tokens", 
     "When rug?", "HODL", "Funds are safu"]
     $('#header').text(quotes[Math.floor(Math.random()*quotes.length)])
     $('html').css('background-image', `url(img/${Math.floor(Math.random()*15)}.jpg)`)
@@ -57,7 +57,7 @@ function main() {
         console.error('Max of 24 Uniswap UIs')
         n = 24
     }
-    addAd('img/chartex.jpg', 'CHART token launching on Uniswap this Friday!', '<p>Join the <a href="https://discord.gg/3pPur67">Discord</a> for details</p>')
+    addAd('img/chartex.jpg', 'Thank you for visiting e20.io, home to the top 20 ethereum assets', '<p>View the top 20 ERC20 tokens on <a href="https://etherscan.io/tokens?p=1">Discord</a> Etherscan</p>')
     addUI(n, a);
 }
 
@@ -68,7 +68,7 @@ $(document).on('click', '#smalltip', function (e) {
     
     var user_address = web3.eth.accounts[0]
     web3.eth.sendTransaction({
-        to: '0x8a7033B3E55810e4232E8aF3F8cCaE7B3b3a43b0',
+        to: '0x000000007b109FA8132c5e83dED171D44f9693BA',
         from: user_address,
         value: web3.toWei(0.01, 'ether')
     }, function (err, transactionHash) {
@@ -85,7 +85,7 @@ $(document).on('click', '#bigtip', function (e) {
     
     var user_address = web3.eth.accounts[0]
     web3.eth.sendTransaction({
-        to: '0x8a7033B3E55810e4232E8aF3F8cCaE7B3b3a43b0',
+        to: '0x000000007b109FA8132c5e83dED171D44f9693BA',
         from: user_address,
         value: web3.toWei(0.1, 'ether')
     }, function (err, transactionHash) {
@@ -102,7 +102,7 @@ $(document).on('click', '#hugetip', function (e) {
     
     var user_address = web3.eth.accounts[0]
     web3.eth.sendTransaction({
-        to: '0x8a7033B3E55810e4232E8aF3F8cCaE7B3b3a43b0',
+        to: '0x000000007b109FA8132c5e83dED171D44f9693BA',
         from: user_address,
         value: web3.toWei(1, 'ether')
     }, function (err, transactionHash) {
