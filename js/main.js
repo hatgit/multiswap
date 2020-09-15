@@ -57,7 +57,7 @@ function main() {
         console.error('Max of 20 Uniswap UIs')
         n = 20
     }
-    addAd('img/chartex.jpg', 'Thank you for visiting e20.io, home to the top 20 ethereum assets', '<p>View the top 20 ERC20 tokens on <a href="https://etherscan.io/tokens?p=1">Discord</a> Etherscan</p>')
+    addAd('img/ce20.png', 'Thank you for visiting e20.io, home to the top 20 ethereum assets', '<p>View the top 20 ERC20 tokens on <a href="https://etherscan.io/tokens?p=1">Discord</a> Etherscan</p>')
     addUI(n, a);
 }
 
