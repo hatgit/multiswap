@@ -29,7 +29,7 @@ function addUI(n=null, a=null) {
     if (a) {
         a.map(address => {
             console.log(address)
-            $(`<embed class='uniswap' src="https://app.uniswap.org/#/swap?theme=dark&inputCurrency=${address}&outputCurrency=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" />`)
+            $(`<embed class='uniswap' src="https://app.uniswap.org/#/swap?theme=dark&inputCurrency=${address}&outputCurrency=ETH" />`)
             .appendTo('#flex-container')
         })
     }
