@@ -22,7 +22,7 @@ function addAd(imgUrl, header, body) {
 function addUI(n=null, a=null) {
     quotes = ["Swap the top 20 ethereum ERC20 tokens in one place", "A solution for market-weighted exposure", "Passive ways to buy the top 20 ERC20 Tokens", "Passive investing in Crypto", 
     "Buy Ethereym tokens", "Swap ETH for top ERC20 assets", "How to buy the top 20 ethereum tokens", 
-    "When moon", "HODL", "Funds are safu"]
+    "When moon?", "HODL", "Funds are safu"]
     $('#header').text(quotes[Math.floor(Math.random()*quotes.length)])
     $('html').css('background-image', `url(img/${Math.floor(Math.random()*15)}.jpg)`)
 
@@ -57,7 +57,7 @@ function main() {
         console.error('Max of 20 Uniswap UIs')
         n = 20
     }
-    addAd('img/ce20.png', 'Thank you for visiting e20.io, home to the top 20 ethereum assets', '<p>View the top 20 ERC20 tokens on <a href="https://etherscan.io/tokens?p=1">Discord</a> Etherscan</p>')
+    addAd('img/e20.png', 'Thank you for visiting e20.io, home to the top 20 ethereum assets', '<p>View the top 20 ERC20 tokens on <a href="https://etherscan.io/tokens?p=1">Discord</a> Etherscan</p>')
     addUI(n, a);
 }
 
